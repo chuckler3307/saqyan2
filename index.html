@@ -1352,7 +1352,7 @@
                 <section class="light">
                     <div class="wrap">
                         <div class="gallery">
-                            ${gallery.map((g, i) => `<button onclick="lightbox=${i};render()"><img class="${g[2]} imgzoom" src="${g[0]}" alt="${g[1]}"></button>`).join('')}
+                           ${gallery.map((g, i) => `<button onclick="lightbox=${i};render()"><img class="${g[2]} imgzoom" src="${g[0].startsWith('http') ? g[0] : './images/' + g[0]}" alt="${g[1]}"></button>`).join('')}
                         </div>
                         <div class="igbox">
                             <div class="script">daily pours</div>
